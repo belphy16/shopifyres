@@ -1,0 +1,40 @@
+  <!--<navbar></navbar>
+  <h3 class="text-center">Daily Deals</h3>
+
+  <!-- We are going to get an array of deals stored in the publicDeals variable. We'll loop over that variable here using the ngFor directive 
+  <div class="col-sm-4" *ngFor="let deal of publicDeals">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a class="panel-title" (click)="onClick()">{{deal.name}}</a>
+      </div>
+      <div class="panel-body">
+          {{deal.description}} 
+      </div>
+      <div class="panel-footer">
+        <ul class="list-inline">
+          <li>Original</li>
+          <li class="pull-right">Sale</li>
+        </ul>
+        <ul class="list-inline">
+          <li><a class="btn btn-danger">${{deal.originalPrice}}</a></li>
+          <!--<li class="pull-right"><a class="btn btn-success">${{deal.salePrice}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
+<navbar></navbar>
+<div class="row">
+    <div *ngFor="let product of publicDeals">
+        <div class="col-xs-4">
+            <div class="thumbnail product">
+                <span class="badge">{{product.id}}</span> <strong>{{product.name}}</strong><br>
+                <img width="250" height="250" src={{product.image}} >
+                
+                <!--<p>{{product.info}}</p>-->
+                <h1 class="badge">${{product. originalPrice}}</h1>
+                <button (click)="addToCart(product)" class="btn btn-sm btn-primary">Add to Cart</button>
+                <button (click)="clickedProduct(product)" id="Productdetail" class="btn btn-sm btn-success">Details</button>
+            </div>
+        </div>
+    </div>
+</div>
